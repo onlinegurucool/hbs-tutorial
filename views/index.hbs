@@ -1,0 +1,47 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+
+<h1>
+    {{floor (divide 20 12)}}
+</h1>
+
+
+{{#makeBold 'onlinegurucool'}}
+    this text will print as bold text
+{{/makeBold}}
+
+
+<br>
+
+{{#contains peoples 'salman'}}
+    tiger is back
+{{else }}
+    ohh where is our tiger
+{{/contains}}
+
+{{#each peoples}}
+    {{this}}
+{{/each}}
+<br>
+<br>
+
+{{#each product}}
+
+   name :  {{this.name}} <br>
+category : {{this.category}}
+    {{#eq this.category 'Electronics'}}
+        icon elctrocnis 
+    {{else}}
+        icon other
+    {{/eq}}
+    <br>
+{{#if this.stock}}
+<a href="">buy now</a>
+{{else}}
+    out of stock
+{{/if}}
+<br> <br>
+stock : {{this.stock}} <br> <br> <br>
+{{/each}}
+
+
